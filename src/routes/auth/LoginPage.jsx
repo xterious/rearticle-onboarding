@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../../assets/ui/Logo.svg";
+import InputFieldComponent from "../../components/ui/InputFieldComponent";
+import PrimaryButtonComponent from "../../components/ui/PrimaryButtonComponent";
 
 const LoginPage = () => {
   return (
@@ -12,16 +14,8 @@ const LoginPage = () => {
           <h3 className="text-3xl text-[#424242] text-center font-bold">
             Tell us about you
           </h3>
-          <input
-            type="text"
-            className="border border-gray-300 rounded-md pl-4 pr-20 py-2 focus:outline-none focus:border-blue-500"
-            placeholder="Your Name"
-          />
-          <input
-            type="text"
-            class="border border-gray-300 rounded-md pl-4 pr-20 py-2 focus:outline-none focus:border-blue-500"
-            placeholder="Name of the Institution"
-          />
+          <InputFieldComponent placeholder="Your Name"></InputFieldComponent>
+          <InputFieldComponent placeholder="Name of the Institution"></InputFieldComponent>
           <p className="text-[#424242b3] text-xs/[22px] font-medium cursor-default text-center">
             By clicking “Agree”, you agree to our
             <a href="#" className="text-blue-600 underline ml-1">
@@ -33,10 +27,8 @@ const LoginPage = () => {
             </a>
             explains how we process your data
           </p>
-          <div className="flex bg-red-300 w-full rounded-lg">
-            <button class="shadow-md grow bg-blue-700 hover:bg-blue-800 text-white font-medium py-2 px-4 rounded">
-              Agree
-            </button>
+          <div className="flex w-full rounded-lg">
+            <PrimaryButtonComponent name="Agree"></PrimaryButtonComponent>
           </div>
         </div>
       </div>
