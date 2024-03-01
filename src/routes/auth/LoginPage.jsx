@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Logo from "../../assets/ui/Logo.svg";
 import InputFieldComponent from "../../components/ui/InputFieldComponent";
 import PrimaryButtonComponent from "../../components/ui/PrimaryButtonComponent";
+import RegistrationComponent from "../../components/ui/RegistrationComponent";
+import PasswordButtonComponent from "../../components/ui/PasswordButtonComponent";
+import SeperatorComponent from "../../components/ui/SeperatorComponent";
 
 const LoginPage = () => {
   const [continued, setContinued] = useState(false);
@@ -15,17 +18,26 @@ const LoginPage = () => {
           <h3 className="text-3xl text-[#424242] text-center font-bold">
             Create your account
           </h3>
-          <InputFieldComponent placeholder="Email address"></InputFieldComponent>
-          <PrimaryButtonComponent name="Continue"></PrimaryButtonComponent>
+          <InputFieldComponent
+            type="email"
+            placeholder="Email address"
+          ></InputFieldComponent>
+          {continued && <PasswordButtonComponent></PasswordButtonComponent>}
+          <PrimaryButtonComponent
+            onClick={() => {
+              console.log(continued);
+              setContinued(!continued);
+            }}
+            name="Continue"
+          ></PrimaryButtonComponent>
           <p className="text-[#424242b3] text-xs/[22px] font-medium cursor-default text-center">
             Don't have an account ?
             <a href="#" className="text-blue-600 ml-1">
               Sign up
             </a>
           </p>
-          <div className="flex w-full rounded-lg">
-            <PrimaryButtonComponent name="Agree"></PrimaryButtonComponent>
-          </div>
+          {!continued && <SeperatorComponent></SeperatorComponent>}
+          {!continued && <RegistrationComponent></RegistrationComponent>}
         </div>
       </div>
       <div className="flex absolute bottom-5">
