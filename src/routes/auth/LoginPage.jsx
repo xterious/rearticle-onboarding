@@ -5,7 +5,9 @@ const LoginPage = () => {
   return (
     <div className="flex justify-center items-center h-svh relative w-full">
       <div className="flex gapy-2 flex-col w-full md:w-1/2 lg:w-1/4 px-4">
-        <img className="w-18" src={Logo} alt="Rearticle Logo" />
+        <div className=" flex items-center justify-center">
+          <img className="w-26" src={Logo} alt="Rearticle Logo" />
+        </div>
         <div className="flex gap-y-6 flex-col">
           <h3 className="text-3xl text-[#424242] text-center font-bold">
             Tell us about you
