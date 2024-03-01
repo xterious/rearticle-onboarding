@@ -1,6 +1,5 @@
 import { lazy } from "react";
 
-const DashboardLayout = lazy(() => import("./DashboardLayout"));
 const LoginPage = lazy(() => import("./auth/LoginPage"));
 const SignupPage = lazy(() => import("./auth/SignupPage"));
 
@@ -12,7 +11,6 @@ const SharedProjectsPage = lazy(() =>
 );
 
 export {
-  DashboardLayout,
   LoginPage,
   SignupPage,
   AllProjectsPage,

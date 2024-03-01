@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import HomePage from "./HomePage";
+import DashboardLayout from "./DashboardLayout";
 import {
   AllProjectsPage,
-  DashboardLayout,
   LoginPage,
   MyProjectsPage,
   SharedProjectsPage,
