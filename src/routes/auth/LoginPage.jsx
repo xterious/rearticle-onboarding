@@ -16,7 +16,7 @@ const LoginPage = () => {
         </div>
         <div className="flex gap-y-6 flex-col">
           <h3 className="text-3xl text-[#424242] text-center font-bold">
-            Create your account
+            Welcome Back
           </h3>
           <InputFieldComponent
             type="email"
@@ -36,8 +36,8 @@ const LoginPage = () => {
               Sign up
             </a>
           </p>
-          {!continued && <SeperatorComponent></SeperatorComponent>}
-          {!continued && <RegistrationComponent></RegistrationComponent>}
+          {!continued && <SeperatorComponent/>}
+          {!continued && <RegistrationComponent/>}
         </div>
       </div>
       <div className="flex absolute bottom-5">
